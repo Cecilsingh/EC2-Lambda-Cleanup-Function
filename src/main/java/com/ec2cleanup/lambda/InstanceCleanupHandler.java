@@ -1,4 +1,4 @@
-package com.example.lambda;
+package com.ec2cleanup.lambda;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
@@ -23,7 +23,7 @@ public class InstanceCleanupHandler implements RequestHandler<Map<String, String
 
     private static final String TARGET_TAG_KEY = "Provisioner";
     private static final String TARGET_TAG_VALUE = "Terraform via Semaphore";
-    private static final double CPU_THRESHOLD = 1.0;
+    private static final double CPU_THRESHOLD = 1.1;
     private static final int STOP_AFTER_DAYS = 2;
     private static final int DELETE_AFTER_DAYS = 10;
 
